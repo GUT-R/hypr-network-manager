@@ -68,7 +68,7 @@ public class BlankWindow : Gtk.ApplicationWindow {
         add_css_class (MainWindowCssClasses.BLANK_WINDOW);
         var provider = new Gtk.CssProvider ();
         provider.load_from_string (
-            "window.blankwindow, .blank-window, .blank-window-surface {"
+            ".blank-window, .blank-window-surface {"
             + "background-color: transparent;"
             + "background: transparent;"
             + "box-shadow: none;"
@@ -79,7 +79,7 @@ public class BlankWindow : Gtk.ApplicationWindow {
             blank_window_style_provider_add_for_display (
                 display,
                 provider,
-                Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION + 50
+                Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION + 1
             );
         }
     }
