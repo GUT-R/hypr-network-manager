@@ -47,7 +47,7 @@ public class BlankWindow : Gtk.ApplicationWindow {
         blank_window_gesture.propagation_phase = Gtk.PropagationPhase.BUBBLE;
 
         blank_window_gesture.pressed.connect ((n_press, x, y) => {
-            app.request_close ();
+             @app.request_close ();
         });
 
         GtkLayerShell.init_for_window (this);
@@ -79,7 +79,7 @@ public class BlankWindow : Gtk.ApplicationWindow {
             blank_window_style_provider_add_for_display (
                 display,
                 provider,
-                Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION + 1
+                Gtk.STYLE_PROVIDER_PRIORITY_USER + 1
             );
         }
     }

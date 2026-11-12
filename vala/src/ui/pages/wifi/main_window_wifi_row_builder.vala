@@ -622,6 +622,7 @@ namespace MainWindowWifiRowBuilder {
         row.set_data<Gtk.Revealer> ("actions-revealer", actions_revealer);
 
         var click = new Gtk.GestureClick ();
+        click.button = Gdk.BUTTON_PRIMARY;
         var local_row = row;
         click.released.connect ((n_press, x, y) => {
             bool expanded = !actions_revealer.get_reveal_child ();

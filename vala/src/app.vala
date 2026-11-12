@@ -279,6 +279,9 @@ public class NetworkManager : Gtk.Application {
         var display = Gdk.Display.get_default ();
         if (display != null) {
             show_dismiss_overlay_for_monitor (display.get_monitor_at_surface (surface));
+            // Keep the main surface above the full-monitor dismiss surface so its
+            // controls remain the pointer target.
+            window.present ();
         }
 
         ulong id = 0;

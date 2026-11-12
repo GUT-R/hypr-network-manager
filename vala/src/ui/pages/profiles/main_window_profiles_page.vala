@@ -156,6 +156,7 @@ public class MainWindowProfilesPage : Gtk.Box {
             root.append (delete_btn);
 
             var click = new Gtk.GestureClick ();
+            click.button = Gdk.BUTTON_PRIMARY;
             click.released.connect ((n_press, x, y) => {
                 this.open_profile (row_profile);
             });
@@ -217,6 +218,7 @@ public class MainWindowProfilesPage : Gtk.Box {
             root.append (details_btn);
 
             var click = new Gtk.GestureClick ();
+            click.button = Gdk.BUTTON_PRIMARY;
             click.released.connect ((n_press, x, y) => {
                 this.open_ethernet_profile (row_device);
             });
